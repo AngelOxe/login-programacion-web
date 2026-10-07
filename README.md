@@ -9,7 +9,7 @@
 ### Integrantes
 
 - Ángel Yibán Ruiz Osante
-- [NOMBRE DE TU COMPAÑERA]
+- Karla Guadalupe Antonio Vázquez
 
 ---
 
@@ -812,7 +812,7 @@ El proyecto será publicado mediante GitHub Pages para poder ejecutar el flujo c
 Enlace:
 
 ```text
-[AGREGAR ENLACE DE GITHUB PAGES]
+https://angeloxe.github.io/login-programacion-web/login.html
 ```
 
 ---
