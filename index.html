@@ -24,21 +24,58 @@
     <!-- navbar  -->
     <div id="navbar-container"></div>
 
-    <!-- Contenido principal -->
-    <main class="container mt-4">
-        <h1>Bienvenido al sistema</h1>
-        <p>Selecciona una opción del menú.</p>
-    </main>
+    <!-- Menú lateral -->
+<aside id="sidebar" class="sidebar">
+
+    <div class="sidebar-titulo">
+        Menú
+    </div>
+
+    <button
+        type="button"
+        id="btnUsuarios"
+        class="sidebar-opcion"
+    >
+        <span>👥</span>
+        <span>Usuarios</span>
+        <span id="flechaUsuarios">▼</span>
+    </button>
+
+    <div id="submenuUsuarios" class="submenu">
+
+        <button
+            type="button"
+            id="btnCaptura"
+            class="submenu-opcion"
+        >
+            Captura
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- Contenido principal -->
+<main id="contenidoPrincipal" class="contenido-principal">
+
+    <h1>Bienvenido al sistema</h1>
+
+    <p>
+        Selecciona una opción del menú.
+    </p>
+
+</main>
 
     <!-- Bootstrap -->
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
 
-    <!-- Utilerías existentes -->
+    <!-- Utilería -->
     <script src="js/utileria.js"></script>
 
-    <!-- Navbar existente -->
+    <!-- Navbar  -->
     <script src="js/navbar.js"></script>
 
 </body>
