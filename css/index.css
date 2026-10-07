@@ -141,3 +141,38 @@ main p {
 .contenido-principal.sidebar-abierto {
     margin-left: 250px;
 }
+
+/* FORMULARIO DE USUARIO */
+
+.seccion-formulario {
+    display: none;
+    max-width: 650px;
+
+    margin-top: 30px;
+    padding: 25px;
+
+    background-color: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.seccion-formulario h2 {
+    margin-bottom: 25px;
+
+    color: #1f2937;
+
+    font-size: 24px;
+}
+
+.mensaje-error {
+    min-height: 20px;
+
+    margin-top: 5px;
+
+    font-size: 14px;
+
+    color: #dc3545;
+}
+

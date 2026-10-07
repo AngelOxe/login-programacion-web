@@ -59,11 +59,80 @@
 <!-- Contenido principal -->
 <main id="contenidoPrincipal" class="contenido-principal">
 
-    <h1>Bienvenido al sistema</h1>
+   <h1>Bienvenido al sistema</h1>
 
-    <p>
-        Selecciona una opción del menú.
-    </p>
+<p id="mensajeBienvenida">
+    Selecciona una opción del menú.
+</p>
+
+<!-- Formulario de captura de usuario -->
+<section id="seccionCaptura" class="seccion-formulario">
+
+    <h2>Captura de usuario</h2>
+
+    <form id="formUsuario">
+
+        <!-- Nombre -->
+        <div class="mb-3">
+            <label for="nombreUsuario" class="form-label">
+                Nombre
+            </label>
+
+            <input
+                type="text"
+                id="nombreUsuario"
+                class="form-control"
+                placeholder="Ingresa tu nombre"
+            >
+
+            <div id="errorNombre" class="mensaje-error"></div>
+        </div>
+
+
+        <!-- Correo -->
+        <div class="mb-3">
+            <label for="correoUsuario" class="form-label">
+                Correo electrónico
+            </label>
+
+            <input
+                type="email"
+                id="correoUsuario"
+                class="form-control"
+                placeholder="correo@ejemplo.com"
+            >
+
+            <div id="errorCorreoUsuario" class="mensaje-error"></div>
+        </div>
+
+
+        <!-- Contraseña -->
+        <div class="mb-3">
+            <label for="passwordUsuario" class="form-label">
+                Contraseña
+            </label>
+
+            <input
+                type="password"
+                id="passwordUsuario"
+                class="form-control"
+                placeholder="Ingresa una contraseña"
+            >
+
+            <div id="errorPasswordUsuario" class="mensaje-error"></div>
+        </div>
+
+
+        <button
+            type="submit"
+            class="btn btn-primary"
+        >
+            Guardar usuario
+        </button>
+
+    </form>
+
+</section>
 
 </main>
 
@@ -77,6 +146,9 @@
 
     <!-- Navbar  -->
     <script src="js/navbar.js"></script>
+
+    <!-- Index  -->
+    <script src="js/index.js"></script>
 
 </body>
 </html>

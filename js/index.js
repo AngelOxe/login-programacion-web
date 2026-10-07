@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const contenidoPrincipal =
         document.getElementById("contenidoPrincipal");
+    
+    const btnCaptura = document.getElementById("btnCaptura");
+    const seccionCaptura = document.getElementById("seccionCaptura");
 
 
     // Abrir y cerrar sidebar
@@ -41,5 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
+
+    // Mostrar formulario de captura
+    btnCaptura.addEventListener("click", function () {
+
+    seccionCaptura.style.display = "block";
+
+});
 
 });
