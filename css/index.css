@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #212529;
+}
+
+/* Contenido principal */
+main {
+    padding-bottom: 40px;
+}
+
+main h1 {
+    color: #1f2937;
+    font-weight: 700;
+}
+
+main p {
+    color: #6b7280;
+}
