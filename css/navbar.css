@@ -1,0 +1,165 @@
+.navbar-sistema {
+    width: 100%;
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+    position: relative;
+    z-index: 1000;
+}
+
+
+.navbar-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.btn-menu {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: transparent;
+
+    font-size: 23px;
+
+    cursor: pointer;
+}
+
+
+.btn-menu:hover {
+    background-color: #f3f4f6;
+}
+
+
+.titulo-sistema {
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #1f2937;
+}
+
+
+.navbar-usuario {
+    position: relative;
+}
+
+
+.btn-usuario {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: transparent;
+
+    color: #374151;
+
+    cursor: pointer;
+}
+
+
+.btn-usuario:hover {
+    background-color: #f3f4f6;
+}
+
+
+.icono-usuario {
+    font-size: 20px;
+}
+
+
+.flecha {
+    font-size: 10px;
+}
+
+
+.menu-usuario {
+    display: none;
+
+    position: absolute;
+
+    top: calc(100% + 8px);
+    right: 0;
+
+    min-width: 190px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+}
+
+
+.menu-usuario.mostrar {
+    display: block;
+}
+
+
+.btn-salir {
+    width: 100%;
+
+    padding: 12px 16px;
+
+    border: none;
+
+    background-color: #ffffff;
+
+    text-align: left;
+
+    color: #dc3545;
+
+    cursor: pointer;
+}
+
+
+.btn-salir:hover {
+    background-color: #f8f9fa;
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar-sistema {
+        padding: 0 12px;
+    }
+
+
+    .titulo-sistema {
+        display: none;
+    }
+
+
+    #nombreUsuario {
+        max-width: 160px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+}
