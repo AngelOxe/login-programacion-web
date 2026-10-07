@@ -8,11 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const flechaUsuarios = document.getElementById("flechaUsuarios");
 
-    const contenidoPrincipal =
-        document.getElementById("contenidoPrincipal");
+    const contenidoPrincipal = document.getElementById("contenidoPrincipal");
     
     const btnCaptura = document.getElementById("btnCaptura");
     const seccionCaptura = document.getElementById("seccionCaptura");
+
+    const btnEstudiante = document.getElementById("btnEstudiante");
+
+    const seccionEstudiante = document.getElementById("seccionEstudiante");
 
 
     // Abrir y cerrar sidebar
@@ -50,7 +53,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     seccionCaptura.style.display = "block";
 
-});
+    seccionEstudiante.style.display = "none";
+
+    });
+
+    // Mostrar formulario de estudiante
+    btnEstudiante.addEventListener("click", function () {
+
+    seccionEstudiante.style.display = "block";
+
+    seccionCaptura.style.display = "none";
+
+     });
 
 });
 
