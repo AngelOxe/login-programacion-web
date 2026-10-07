@@ -199,3 +199,122 @@ passwordUsuario.addEventListener("input", function () {
     passwordUsuario.classList.remove("is-invalid");
 
 });
+
+/* FORMULARIO DE ESTUDIANTE */
+
+const formEstudiante = document.getElementById("formEstudiante");
+
+const numeroControl = document.getElementById("numeroControl");
+
+const nombreEstudiante = document.getElementById("nombreEstudiante");
+
+const edadEstudiante = document.getElementById("edadEstudiante");
+
+const errorControl = document.getElementById("errorControl");
+
+const errorNombreEstudiante = document.getElementById("errorNombreEstudiante");
+
+const errorEdad = document.getElementById("errorEdad");
+
+const mensajeEdad = document.getElementById("mensajeEdad");
+
+const modalEdad =
+    new bootstrap.Modal(
+        document.getElementById("modalEdad")
+    );
+
+
+formEstudiante.addEventListener("submit", function (evento) {
+
+    evento.preventDefault();
+
+    const control = numeroControl.value.trim();
+    const nombre = nombreEstudiante.value.trim();
+    const edad = Number(edadEstudiante.value);
+
+    let formularioValido = true;
+
+
+    // Limpiar errores
+    errorControl.textContent = "";
+    errorNombreEstudiante.textContent = "";
+    errorEdad.textContent = "";
+
+    numeroControl.classList.remove("is-invalid");
+    nombreEstudiante.classList.remove("is-invalid");
+    edadEstudiante.classList.remove("is-invalid");
+
+
+    // Validar número de control
+    if (!/^\d{6}$/.test(control)) {
+
+        errorControl.textContent =
+            "El número de control debe tener exactamente 6 dígitos.";
+
+        numeroControl.classList.add("is-invalid");
+
+        formularioValido = false;
+    }
+
+
+    // Validar nombre
+    if (nombre === "") {
+
+        errorNombreEstudiante.textContent =
+            "El nombre es obligatorio.";
+
+        nombreEstudiante.classList.add("is-invalid");
+
+        formularioValido = false;
+
+    } else if (!soloLetras(nombre)) {
+
+        errorNombreEstudiante.textContent =
+            "El nombre solamente debe contener letras.";
+
+        nombreEstudiante.classList.add("is-invalid");
+
+        formularioValido = false;
+    }
+
+
+    // Validar edad
+    if (
+        edadEstudiante.value === "" ||
+        edad < 1
+    ) {
+
+        errorEdad.textContent =
+            "Ingresa una edad válida.";
+
+        edadEstudiante.classList.add("is-invalid");
+
+        formularioValido = false;
+    }
+
+
+    if (!formularioValido) {
+        return;
+    }
+
+
+    // Determinar mayoría de edad
+    const fechaNacimiento = new Date();
+          fechaNacimiento.setFullYear(
+    fechaNacimiento.getFullYear() - edad
+   );
+
+    const fechaNacimientoTexto =
+    fechaNacimiento.toISOString().split("T")[0];
+
+    if (esMayorDeEdad(fechaNacimientoTexto)) {
+    mensajeEdad.textContent =
+        "El estudiante es mayor de edad.";
+    } else {
+    mensajeEdad.textContent =
+        "El estudiante es menor de edad.";
+   }
+
+    modalEdad.show();
+
+});
